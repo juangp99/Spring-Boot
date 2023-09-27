@@ -1,0 +1,1 @@
+alter table consultas change data fecha tinyint;

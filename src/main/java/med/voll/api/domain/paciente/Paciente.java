@@ -20,7 +20,7 @@ public class Paciente {
     private Long id;
     private String nombre;
     private String email;
-    private String documentoIdentidad;
+    private String documento;
     private String telefono;
     @Embedded
     private Direccion direccion;
@@ -32,19 +32,19 @@ public class Paciente {
         this.nombre = datos.nombre();
         this.email = datos.email();
         this.telefono = datos.telefono();
-        this.documentoIdentidad = datos.documentoIdentidad();
+        this.documento = datos.documento();
         this.direccion = new Direccion(datos.direccion());
     }
 
-    public void actualizarInformacion(DatosActualizacionPaciente datosActualizacionPaciente) {
-        if (datosActualizacionPaciente.nombre() != null) {
-            this.nombre = datosActualizacionPaciente.nombre();
+    public void actualizarInformacion(DatosActualizacionPaciente datos) {
+        if (datos.nombre() != null) {
+            this.nombre = datos.nombre();
         }
-        if (datosActualizacionPaciente.telefono() != null) {
-            this.telefono = datosActualizacionPaciente.telefono();
+        if (datos.telefono() != null) {
+            this.telefono = datos.telefono();
         }
-        if (datosActualizacionPaciente.direccion() != null) {
-            this.direccion.actualizarDatos(datosActualizacionPaciente.direccion());
+        if (datos.direccion() != null) {
+            this.direccion.actualizarDireccion(datos.direccion());
         }
     }
 

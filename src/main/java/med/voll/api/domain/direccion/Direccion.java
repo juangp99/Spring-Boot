@@ -25,7 +25,7 @@ public class Direccion {
         this.ciudad = direccion.ciudad();
     }
 
-    public Direccion actualizarDatos(DatosDireccion direccion) {
+    public Direccion actualizarDireccion(DatosDireccion direccion) {
         this.calle = direccion.calle();
         this.numero = direccion.numero();
         this.distrito = direccion.distrito();
